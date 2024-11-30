@@ -1,0 +1,83 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background-color: #faf8f8;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(43, 40, 40);
+    border-radius: 8px;
+}
+
+#home {
+    background-image: url(indian_clothing_men.jpg);
+    max-width: 100%;
+    height: 300px;
+    opacity: 0.8;
+}
+
+#home .content {
+    margin: 10%;
+    
+}
+/* logo */
+#Logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;   
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+nav ul li {
+    margin-right: 30px;/* Space between navigation items */
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold; 
+    padding: 8px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+main {
+    padding: 2rem;
+}
+
+table {
+    border-spacing: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

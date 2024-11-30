@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinah Collections</title>
+    <link rel="stylesheet" href="reinahstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
+                <button id="search-button" aria-label="Search products">Search</button>
+                <div class="menu-icon" id="menu-icon" aria-label="Open navigation menu">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <div class="cart-icon" id="cart-icon" aria-label="View cart">
+                    <i class="fa fa-shopping-cart"></i>
+                </div>
+            </nav>
+        </div>
+        <div class="overlay" id="myNav">
+            <a href="javascript:void(0)" class="closebtn" aria-label="Close navigation menu">&times;</a>
+            <div class="overlay-content">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close" aria-label="Close cart modal">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div> <!-- Container for cart items -->
+            <button id="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero-section" id="home">
+            <div class="hero-text">
+                <h1>Welcome to Reinah Collections</h1>
+                <p>Your one-stop shop for the latest fashion trends.</p><br><br>
+                <a href=".products_grid" class="btn">SHOP NOW</a>
+            </div>
+        </section>
+
+        <section class="products-section" id="products">
+            <div class="products">
+                <h2>Featured Products</h2><br>
+            </div>
+            <div class="products">
+                <h2>Wholesale Products</h2>
+                <hr class="dashed">
+            </div>
+            <div class="product_grid">
+                <div class="product">
+                    <img src="dress.jpg" alt="Dress" loading="lazy">
+                    <h3>Dresses</h3>
+                    <p class="price">KES 980.00</p>
+                    <!-- Updated Button with data- attributes -->
+                    <button class="add-to-cart-btn" data-name="Dresses" data-price="980.00" aria-label="Add Dresses to cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="tracks.jpg" alt="Track suits" loading="lazy">
+                    <h3>Track Suits</h3>
+                    <p class="price">KES 980.00</p>
+                    <button class="add-to-cart-btn" data-name="Track Suits" data-price="980.00" aria-label="Add Track Suits to cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="pullover.jpg" alt="Children's sweater" loading="lazy">
+                    <h3>Children's Sweater</h3>
+                    <p class="price">KES 980.00</p>
+                    <button class="add-to-cart-btn" data-name="Children's Sweater" data-price="980.00" aria-label="Add Children's Sweater to cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="beannies.jpg" alt="Beanies for your kids" loading="lazy">
+                    <h3><a href="beanies-ed.html">Beanies for Your Kids</a></h3>
+                    <p class="price">KES 980.00</p>
+                    <button class="add-to-cart-btn" data-name="Beanies for Your Kids" data-price="980.00" aria-label="Add Beanies for Your Kids to cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="official.jpg" alt="Official skirts" loading="lazy">
+                    <h3><a href="official-skirt.html">Official Skirts</a></h3>
+                    <p class="price">KES 980.00</p>
+                    <button class="add-to-cart-btn" data-name="Official Skirts" data-price="980.00" aria-label="Add Official Skirts to cart">Add to Cart</button>
+                </div>
+            </div><br>
+            <div class="products">
+                <h2>Retail Sales</h2>
+                <hr class="gradient">
+            </div>
+            <div class="product_grid">
+                <div class="product">
+                    <img src="korean_wear.jpg" alt="Korean wear" loading="lazy">
+                    <h3>Korean Wear</h3>
+                    <p class="price">KES 980.00</p>
+                    <button class="add-to-cart-btn" data-name="Korean Wear" data-price="980.00" aria-label="Add Korean Wear to cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="lessos.jpg" alt="Lessos" loading="lazy">
+                    <h3>Lessos</h3>
+                    <p class="price">KES 980.00</p>
+                    <button class="add-to-cart-btn" data-name="Lessos" data-price="980.00" aria-label="Add Lessos to cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="tracks.jpg" alt="Track suits" loading="lazy">
+                    <h3>Track Suits</h3>
+                    <p class="price">KES 980.00</p>
+                    <button class="add-to-cart-btn" data-name="Track Suits" data-price="980.00" aria-label="Add Track Suits to cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <form class="contact-form" action="/submit-form" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer-contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Reinah Collections is dedicated to providing the latest fashion trends for all ages.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Get in touch with us at <a href="mailto:info@reinahcollections.com">info@reinahcollections.com</a>.</p>
+            </div>
+            <!-- Added 'follow-us' class here -->
+            <div class="footer-section follow-us">
+                <h4>Follow Us</h4>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Follow us on Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Follow us on Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Follow us on Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="Follow us on TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Follow us on LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2024 Reinah Collections. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="reinah_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Title - Reinah Collections</title>
+    <link rel="stylesheet" href="reinahstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.min.css" integrity="sha512-7rXIvd/xj1FnI2zKQjjXzDFxC4twqBByp8yxOgEQJs4C/aNzNyoQsOO7VxH0RgYNhbAYLJLwzqslaP50KTTHIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Skip Navigation Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="container">
+            <nav>
+                <form action="/search" method="GET" class="search-form">
+                    <input type="text" id="search-input" name="query" placeholder="Search products..." aria-label="Search products">
+                    <button type="submit" id="search-button" aria-label="Search products">Search</button>
+                </form>
+                <button class="menu-icon" id="menu-icon" aria-label="Open navigation menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <button class="cart-icon" id="cart-icon" aria-label="View cart">
+                    <i class="fa fa-shopping-cart"></i>
+                </button>
+            </nav>
+        </div>
+        <div class="overlay" id="myNav" aria-hidden="true">
+            <a href="javascript:void(0)" class="closebtn" aria-label="Close navigation menu">&times;</a>
+            <div class="overlay-content">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Modal with Enhanced Accessibility -->
+    <div id="cartModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close" aria-label="Close cart modal">&times;</button>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div> <!-- Container for cart items -->
+            <button id="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <section class="product-detail-section">
+            <div class="container">
+                <!-- Enhanced Breadcrumb Navigation -->
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                        <li aria-current="page">Product Title</li>
+                    </ol>
+                </nav>
+
+                <div class="product-detail">
+                    <div class="product-images">
+                        <div class="main-image">
+                            <img src="images/product-main.jpg" alt="Product Image" loading="lazy">
+                        </div>
+                        <div class="thumbnail-images">
+                            <img src="images/product-thumb1.jpg" alt="Thumbnail Image 1" loading="lazy" class="thumbnail">
+                            <img src="images/product-thumb2.jpg" alt="Thumbnail Image 2" loading="lazy" class="thumbnail">
+                            <img src="images/product-thumb3.jpg" alt="Thumbnail Image 3" loading="lazy" class="thumbnail">
+                            <!-- Add more thumbnails as needed -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h1>Product Title</h1>
+                        <p class="price">KES 980.00</p>
+                        <p class="description">
+                            This elegant dress is crafted from high-quality materials, ensuring comfort and style for any occasion. Available in multiple colors and sizes to suit your preferences.
+                        </p>
+                        <div class="product-specifications">
+                            <h3>Specifications</h3>
+                            <ul>
+                                <li><strong>Color:</strong> Red, Blue, Green</li>
+                                <li><strong>Size:</strong> S, M, L, XL</li>
+                                <li><strong>Material:</strong> 100% Cotton</li>
+                                <li><strong>Care Instructions:</strong> Machine wash cold with similar colors</li>
+                                <!-- Add more specifications as needed -->
+                            </ul>
+                        </div>
+                        <button class="add-to-cart-btn" data-name="Product Title" data-price="980.00" aria-label="Add Product Title to cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="customer-reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="review">
+                        <p><strong>John Doe</strong> <span class="rating" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span></p>
+                        <p>Great quality and fits perfectly!</p>
+                    </div>
+                    <div class="review">
+                        <p><strong>Jane Smith</strong> <span class="rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
+                        <p>Absolutely love this dress. Highly recommend!</p>
+                    </div>
+                    <!-- Add more reviews or a review submission form -->
+                </div>
+
+                <div class="related-products">
+                    <h3>Related Products</h3>
+                    <div class="product_grid">
+                        <div class="product">
+                            <img src="images/official-3.jpg" alt="Related Product 1" loading="lazy">
+                            <h3><a href="product-dresses.html">Dresses</a></h3>
+                            <p class="price">KES 980.00</p>
+                            <button class="add-to-cart-btn" data-name="Dresses" data-price="980.00" aria-label="Add Dresses to cart">Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="images/official-2.jpg" alt="Related Product 2" loading="lazy">
+                            <h3><a href="product-track-suits.html">Track Suits</a></h3>
+                            <p class="price">KES 980.00</p>
+                            <button class="add-to-cart-btn" data-name="Track Suits" data-price="980.00" aria-label="Add Track Suits to cart">Add to Cart</button>
+                        </div>
+                        <!-- Add more related products as needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer-contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Reinah Collections is dedicated to providing the latest fashion trends for all ages.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <address>
+                    <p>Email: <a href="mailto:info@reinahcollections.com">info@reinahcollections.com</a></p>
+                </address>
+            </div>
+            <div class="footer-section follow-us">
+                <h4>Follow Us</h4>
+                <nav aria-label="Social Media Links">
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Follow us on Instagram">
+                                <i class="fa fa-instagram fa-fw"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Follow us on Facebook">
+                                <i class="fa fa-facebook fa-fw"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Follow us on Twitter">
+                                <i class="fa fa-twitter fa-fw"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="Follow us on TikTok">
+                                <i class="fa fa-tiktok fa-fw"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Follow us on LinkedIn">
+                                <i class="fa fa-linkedin fa-fw"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2024 Reinah Collections. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="reinah_script.js"></script>
+</body>
+</html>

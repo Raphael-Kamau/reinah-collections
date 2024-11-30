@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Elegant Red Dress",
+        "price": 980.00,
+        "images": [
+            "images/elegant-red-dress-main.jpg",
+            "images/elegant-red-dress-thumb1.jpg",
+            "images/elegant-red-dress-thumb2.jpg",
+            "images/elegant-red-dress-thumb3.jpg"
+        ],
+        "description": "This elegant red dress is perfect for formal occasions..."
+        // Add more fields as needed
+    },
+    {
+        "name": "Track Suits",
+        "price": 980.00,
+        "images": [
+            "images/tracks-main.jpg",
+            "images/tracks-thumb1.jpg",
+            "images/tracks-thumb2.jpg",
+            "images/tracks-thumb3.jpg"
+        ],
+        "description": "Our comfortable track suits are ideal for both casual and athletic wear..."
+    }
+    // Add more products
+]
